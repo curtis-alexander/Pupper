@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get "/puppies" => "puppies#index"
   post "/puppies" => "puppies#create"
   get "/puppies/:id" => "puppies#show"
+  patch "/puppies/:id/edit" => "puppies#update"
 end

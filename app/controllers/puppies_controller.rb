@@ -18,4 +18,12 @@ class PuppiesController < ApplicationController
     puppy = Puppy.find_by(id: params[:id])
     render json: puppy.as_json
   end
+
+  def update
+    puppy = Puppy.find_by(id: params[:id])
+    puppy.name = params[:name]
+    puppy.age = params[:age]
+    puppy.breed = params[:breed]
+    render json: puppy.as_json
+  end
 end
