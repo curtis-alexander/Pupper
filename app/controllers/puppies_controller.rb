@@ -13,4 +13,9 @@ class PuppiesController < ApplicationController
     puppy.save
     render json: puppy.as_json
   end
+
+  def show
+    puppy = Puppy.find_by(id: params[:id])
+    render json: puppy.as_json
+  end
 end
